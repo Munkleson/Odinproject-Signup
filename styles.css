@@ -178,6 +178,30 @@ input {
     height: 30%;
 }
 
-input:focus {
-    border-color: blue;
+.normalList:focus {
+    border: solid 3px blue;
+    outline: none;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgb(143, 143, 143);
+    width: 297px;
+    height: 27.78px;
+}
+
+.invalid:focus {
+    border: solid 3px red;
+    outline: none;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgb(143, 143, 143);
+    width: 297px;
+    height: 27.78px;
+}
+
+.valid:focus {
+    border: solid 3px green;
+    outline: none;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgb(143, 143, 143);
+    width: 297px;
+    height: 27.78px;
+}
+
+input:invalid {
+    border-color: red;
 }

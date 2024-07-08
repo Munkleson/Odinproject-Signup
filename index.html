@@ -39,15 +39,15 @@
                     <ul>
                         <li>
                             <label for="first_name">FIRST NAME</label>
-                            <input type="text" id="first_name">
+                            <input type="text" id="first_name" class="normalList nonPassword" onclick="removePasswordFocus(this)">
                         </li>
                         <li>
                             <label for="email">EMAIL</label>
-                            <input type="email" id="email">
+                            <input type="email" id="email" class="normalList nonPassword" onclick="removePasswordFocus(this)">
                         </li>
                         <li>
                             <label for="password">PASSWORD</label>
-                            <input type="password" id="password">
+                            <input type="password" id="password" oninput="checkPasswordEligibility(this)" class="normalList" onclick="passwordSelect(this)">
                         </li>
                     </ul>
                 </div>
@@ -55,15 +55,15 @@
                     <ul>
                         <li>
                             <label for="last_name">LAST NAME</label>
-                            <input type="text" id="last_name">
+                            <input type="text" id="last_name" class="normalList nonPassword" onclick="removePasswordFocus(this)">
                         </li>
                         <li>
                             <label for="phone_number">PHONE NUMBER</label>
-                            <input type="number" id="phone_number">
+                            <input type="number" id="phone_number" maxlength="11" oninput="limitInputLength(this)" class="normalList nonPassword" onclick="removePasswordFocus(this)">
                         </li>
                         <li>
                             <label for="confirm_password">CONFIRM PASSWORD</label>
-                            <input type="password" id="confirm_password">
+                            <input type="password" id="confirm_password" oninput="checkPasswordMatch(this)" class="normalList" onclick="confirmPasswordSelect(this)">
                         </li>
                     </ul>
                 </div>
@@ -75,5 +75,8 @@
         </div>
     </div>
 </div>  
+
+
+<script src="scripts.js"></script>
 </body>
 </html>
