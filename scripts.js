@@ -96,7 +96,7 @@ function confirmPasswordSelect (input) {
     if (input.value != otherPassword) {
         input.classList.remove("normalList");
         input.classList.add("invalid");
-    } else if (input.value.length !== 0) {
+    } else if (input.value.length !== 0 && input.value === otherPassword) {
         input.classList.remove("invalid");
         input.classList.add("valid");
     }
